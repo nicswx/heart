@@ -1,18 +1,53 @@
-import math 
-from turtle import *
-speed(1000)
-bgcolor("black")
-def heart1(a):
-    return 12*math.sin(a)**3
-def heart2(b):
-    return 10*math.cos(b)-5*\
-    math.cos(2*b)-2*\
-    math.cos(3*b)-\
-    math.cos(4*b)
-for i in range(6000):
-    goto(heart1(i)*20,heart2(i)*20)
-    for i in range (5):
-        color("#f73480")
-        goto(0,0)
-    done ()
-    
+import turtle 
+
+window = turtle.Screen()
+window.bgcolor("pink")
+window.title("Heart")
+
+pen = turtle.Turtle()
+pen.color("red")
+pen.fillcolor("red")
+pen.pensize(3)
+pen.speed(7)
+
+pen.begin_fill()
+pen.left(140)
+pen.forward(224)
+for _ in range(200):
+    pen.right(1)
+    pen.forward(2)
+pen.left(120)
+for _ in range(200):
+    pen.right(1)
+    pen.forwar(2)
+pen.forward(224)
+pen.end_fill()
+
+
+pen = turtle.Turtle()
+pen.color("red")
+pen.fillcolor("red")
+pen.pensize(3)
+pen.speed(7)
+
+pen.begin_fill()
+pen.left(140)
+pen.forward(224)
+for _ in range(200):
+    pen.right(1)
+    pen.forward(2)
+pen.left(120)
+for _ in range(200):
+    pen.right(1)
+    pen.forwar(2)
+pen.forward(224)
+pen.end_fill()
+
+pen.up()
+pen.goto(0, -70)
+pen.down()
+pen.color("black")
+
+pen.hideturble()
+
+turtle.done()
